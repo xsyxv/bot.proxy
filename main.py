@@ -1,14 +1,6 @@
 from discord.ext import commands
 import requests, asyncio, time, re, discord
 
-
-channel_id = 
-
-TOKEN = ""
-
-
-
-
 bot = commands.Bot(command_prefix="-")
 
 @bot.event
@@ -29,7 +21,7 @@ async def ping(ctx):
 
 async def setup():
     await bot.wait_until_ready()
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game(name="Code in gituhb"))
+    await bot.change_presence(status=discord.Status.dnd, activity=discord.Game(name="Code in github.com/xsyxv"))
     channel = bot.get_channel(channel_id)
     message = None
     while channel != None:
@@ -61,4 +53,6 @@ async def setup():
         await asyncio.sleep(300)
 
 bot.loop.create_task(setup())
+channel_id = 
+TOKEN = ""
 bot.run(TOKEN)
